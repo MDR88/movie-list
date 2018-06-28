@@ -6,6 +6,7 @@ h1El.textContent = "My Movie List";
 //I gave the main div an ID and created it storing in the variable mainContainerDiv.
 const mainContainerDiv = document.querySelector("#large-container");
 
+
 //I created the tag elements for my form.
 const artEl = document.createElement("article");
 
@@ -32,10 +33,14 @@ directorInput.setAttribute("id", "directorInput");
 directorInput.type = "text";
 directorInput.placeholder = "Director";
 
+
+
 // Created a submit button
 const subBtn = document.createElement("button");
 subBtn.setAttribute("id", "submit-button");
 subBtn.textContent = "Submit";
+
+
 
 
 //I will remove this when I create the css
@@ -49,3 +54,26 @@ mainContainerDiv.appendChild(movieTitleinput);
 mainContainerDiv.appendChild(genreInput);
 mainContainerDiv.appendChild(directorInput);
 mainContainerDiv.appendChild(subBtn);
+
+// ADD EVENT LISTNER
+
+subBtn.addEventListener("click", myFunction);
+
+//Create a function that holds an object and empty array that will capture the input values to local storage and then will write to the DOM
+
+function myFunction() {
+    console.log(movieTitleinput.value, genreInput.value, directorInput.value);
+
+    movieDatabase.movieTitleinput.value = []
+    movieDb.genreInput.value = []
+    directorInput.value = []
+
+
+
+
+
+
+}
+
+
+//Create an empty object and array to push in the text values of Movie title, Director and genreInput.
