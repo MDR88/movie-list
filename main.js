@@ -33,6 +33,24 @@ directorInput.setAttribute("id", "directorInput");
 directorInput.type = "text";
 directorInput.placeholder = "Director";
 
+const movieInputs = [{
+        type: "text",
+        id: "movieTitleInput",
+        placeholder: ""
+    }, {
+        type: "text",
+        id: "genreInput",
+        placeholder: ""
+    },
+    {
+        type: "text",
+        id: "directorInput",
+        placeholder: ""
+
+    }
+]
+
+
 
 
 // Created a submit button
@@ -59,20 +77,27 @@ mainContainerDiv.appendChild(subBtn);
 
 subBtn.addEventListener("click", myFunction);
 
+
+const movieDatabase = []
+    // movieDatabase.movieTitleinput.value = []
+    // movieDb.genreInput.value = []
+    // directorInput.value = []
+
 //Create a function that holds an object and empty array that will capture the input values to local storage and then will write to the DOM
 
 function myFunction() {
     console.log(movieTitleinput.value, genreInput.value, directorInput.value);
 
-    movieDatabase.movieTitleinput.value = []
-    movieDb.genreInput.value = []
-    directorInput.value = []
+    const movie = {
+        title: movieTitleinput.value,
+        genre: genreInput.value,
+        director: directorInput.value,
 
+    }
 
-
-
-
-
+    movieDatabase.push(movie)
+    console.log(movieDatabase)
+    saveDatabase(movieDatabase, "movie")
 }
 
 

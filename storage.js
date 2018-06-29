@@ -8,9 +8,9 @@ const loadDatabase = function(localStorageKey) {
     return JSON.parse(databaseString)
 }
 
-let MovieDatabase = loadDatabase("MovieDb")
+// let MovieDatabase = loadDatabase("MovieDb")
 
-if (!MovieDatabase) {
-    MovieDatabase = {}
-    MovieDatabase.staff = []
-}
+// if (!MovieDatabase) {
+//     MovieDatabase = {}
+//     MovieDatabase.staff = []
+//
